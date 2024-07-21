@@ -1,5 +1,5 @@
 import { createContext, useState } from "react";
-import fetchCDGR from "../services/CDGR/fetchCdgr.js";
+import fetchCDGR from "../services/fetchCdgr.js";
 
 const CDGRContext = createContext();
 

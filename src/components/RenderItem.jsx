@@ -1,12 +1,8 @@
-import {
-  Text,
-  View,
-  TouchableOpacity,
-} from "react-native";
-import styles from "../../styles/Styles.jsx";
+import styles from "../styles/StylesMain";
+import { Text, View, TouchableOpacity } from "react-native";
 
-const RenderItem = ({ item, handlePress }) => (
-  <TouchableOpacity onPress={() => handlePress(item)}>
+const RenderItem = ({ item }) => (
+  <TouchableOpacity>
     <View style={styles.dataBox}>
       <Text style={styles.boxName}>{item.sensor.name}</Text>
       <View style={styles.valueContainer}>

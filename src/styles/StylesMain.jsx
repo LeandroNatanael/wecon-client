@@ -1,13 +1,35 @@
 import { StyleSheet, Dimensions } from "react-native";
 
-const { width } = Dimensions.get("window");
+const { width, height } = Dimensions.get("window");
+const navbarHeight = height / 8;
 
 const styles = StyleSheet.create({
+  main: {
+    flex: 1,
+    backgroundColor: "#5dc1b9",
+    alignItems: "center",
+  },
+  page: {
+    marginTop: 30,
+  },
   container: {
     flex: 1,
     backgroundColor: "#5dc1b9",
     alignItems: "center",
-    // justifyContent: "center",
+    width: width,
+    height: height,
+  },
+  navBar: {
+    height: navbarHeight,
+    justifyContent: "flex-end",
+    alignItems: "center",
+    flexDirection: "row",
+    paddingHorizontal: 30,
+  },
+  component: {
+    justifyContent: "center",
+    alignItems: "center",
+    height: height - navbarHeight,
   },
   title: {
     marginTop: 50,
@@ -103,13 +125,6 @@ const styles = StyleSheet.create({
   modalButtons: {
     flexDirection: "row",
     justifyContent: " space-between",
-  },
-  navBarContainer: {
-    borderWidth: 1,
-    alignContent:"center",
-    marginBottom: 20,
-    paddingVertical: 20,
-
   },
 });
 

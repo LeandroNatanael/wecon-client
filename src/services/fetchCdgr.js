@@ -1,4 +1,4 @@
-import fetchData from "../fetchService.js";
+import fetchData from "./fetchService.js";
 
 async function fetchCDGR() {
     let response;

@@ -1,12 +1,13 @@
 import { useContext, useEffect } from "react";
-import { CDGRContext } from "../../contexts/CDGRContext.jsx";
-import HookCDGR from "../../hooks/CDGR/HookCDGR.jsx";
-import { View, Text } from "react-native";
-import styles from "../../styles/Styles.jsx";
-import NavBar from "../NavBar.jsx";
-const CdgrComponent = () => {
-  const { refreshData } = useContext(CDGRContext);
+import { CDGRContext } from "../contexts/CDGRContext.jsx";
+import HookCDGR from "../hooks/CDGR/HookCDGR.jsx";
+import { View} from "react-native";
+import styles from "../styles/StylesMain.jsx";
 
+
+const CdgrComponent = () => {
+  //Actualiza las variables usando useContext
+  const { refreshData } = useContext(CDGRContext);
   useEffect(() => {
     const interval = setInterval(() => {
       refreshData();
@@ -16,10 +17,8 @@ const CdgrComponent = () => {
   }, [refreshData]);
 
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Central NH3 "Proyectos del Mar"</Text>
+    <View style={styles.component}>
       <HookCDGR />
-      <NavBar />
     </View>
   );
 };

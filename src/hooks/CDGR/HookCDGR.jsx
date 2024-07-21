@@ -1,12 +1,14 @@
 import { CDGRContext } from "../../contexts/CDGRContext.jsx";
 import { useContext } from "react";
 import { View, Text, ActivityIndicator } from "react-native";
-import RenderBoxes from "../../components/CDGR Components/RenderBoxes.jsx";
-import styles from "../../styles/Styles.jsx";
+import RenderBoxes from "../../components/RenderBoxes.jsx";
+import styles from "../../styles/StylesMain.jsx";
 
 const HookCDGR = () => {
   const { data, error, loading } = useContext(CDGRContext);
 
+
+    //A futuro crear .jsx dedicados a load y error
   if (loading) {
     return (
       <View style={styles.container}>
